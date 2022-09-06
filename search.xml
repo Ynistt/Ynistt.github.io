@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Centos7配置阿里云yum源</title>
+      <link href="/lzl/8949c6b7.html"/>
+      <url>/lzl/8949c6b7.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一、打开centos的yum文件夹"><a href="#一、打开centos的yum文件夹" class="headerlink" title="一、打开centos的yum文件夹"></a>一、打开centos的yum文件夹</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br></pre></td></tr></table></figure><h1 id="二、用wget下载repo文件"><a href="#二、用wget下载repo文件" class="headerlink" title="二、用wget下载repo文件"></a>二、用wget下载repo文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure><h1 id="三、备份系统原来的repo文件"><a href="#三、备份系统原来的repo文件" class="headerlink" title="三、备份系统原来的repo文件"></a>三、备份系统原来的repo文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv CentOS-Base.repo CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure><h1 id="四、替换系统原理的repo文件"><a href="#四、替换系统原理的repo文件" class="headerlink" title="四、替换系统原理的repo文件"></a>四、替换系统原理的repo文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv Centos-7.repo CentOS-Base.repo</span><br></pre></td></tr></table></figure><h1 id="五、执行yum源更新命令"><a href="#五、执行yum源更新命令" class="headerlink" title="五、执行yum源更新命令"></a>五、执行yum源更新命令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br><span class="line">yum update</span><br></pre></td></tr></table></figure><h1 id="六、安装epel-release"><a href="#六、安装epel-release" class="headerlink" title="六、安装epel-release"></a>六、安装epel-release</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">epel-release</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux简介及常用命令</title>
       <link href="/lzl/3f9ae20c.html"/>
       <url>/lzl/3f9ae20c.html</url>
