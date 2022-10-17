@@ -4,23 +4,23 @@
   
     
     <entry>
-      <title>Java集合</title>
-      <link href="/lzl/4509351.html"/>
-      <url>/lzl/4509351.html</url>
+      <title>hadoop安装</title>
+      <link href="/lzl/dc6256c8.html"/>
+      <url>/lzl/dc6256c8.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一、什么是集合"><a href="#一、什么是集合" class="headerlink" title="一、什么是集合"></a>一、什么是集合</h1>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一、hadoop安装模式"><a href="#一、hadoop安装模式" class="headerlink" title="一、hadoop安装模式"></a>一、hadoop安装模式</h1><p>1、单机模式</p><p>2、完全分布式模式</p><p>3、伪分布式模式</p><h1 id="二、单机版安装"><a href="#二、单机版安装" class="headerlink" title="二、单机版安装"></a>二、单机版安装</h1><h2 id="1、下载hadoop"><a href="#1、下载hadoop" class="headerlink" title="1、下载hadoop"></a>1、下载hadoop</h2><p><a href="https://hadoop.apache.org/releases.html">https://hadoop.apache.org/releases.html</a></p><h2 id="2、用xshell连接上虚拟机，利用rz工具上传到linux，并解压"><a href="#2、用xshell连接上虚拟机，利用rz工具上传到linux，并解压" class="headerlink" title="2、用xshell连接上虚拟机，利用rz工具上传到linux，并解压"></a>2、用xshell连接上虚拟机，利用rz工具上传到linux，并解压</h2><p>[root@localhost hadoop-3.3.2]# tar -xzvf hadoop-3.3.2.tar.gz -C &#x2F;opt&#x2F;</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf hadoop-3.3.2.tar.gz -C /opt/</span><br></pre></td></tr></table></figure><h2 id="3、利用hadoop-version-查看是否安装成功"><a href="#3、利用hadoop-version-查看是否安装成功" class="headerlink" title="3、利用hadoop version 查看是否安装成功"></a>3、利用hadoop version 查看是否安装成功</h2><p>[root@localhost hadoop-3.3.2]# bin&#x2F;hadoop version</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/hadoop version</span><br></pre></td></tr></table></figure><p><strong>此时报错：****ERROR: JAVA_HOME is not set and could not be found.</strong></p><p>解决方案：安装jdk并设置JAVA_HOME</p><ul><li><p>安装jdk</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk-devel.x86_64 -y</span><br></pre></td></tr></table></figure></li><li><p>设置JAVA_HOME</p><p>  (1)  </p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure><p>  (2) 末尾添加一行，并保存退出</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr</span><br></pre></td></tr></table></figure><p>  (3) 利用命令让配置立即生效</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure><p>  修改完毕后运行命令，可以看到hadoop的版本信息</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/hadoop version</span><br></pre></td></tr></table></figure></li></ul><h1 id="三、单词版测试词频统计"><a href="#三、单词版测试词频统计" class="headerlink" title="三、单词版测试词频统计"></a>三、单词版测试词频统计</h1><p>1、建立input文件夹，里面放入文件，并写入单词</p><p>2、运行hadoop自带的程序，实现统计。</p><p>bin&#x2F;hadoop jar &#x2F;opt&#x2F;hadoop-3.3.2&#x2F;share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-</p><p>3.3.2.jar wordcount input output</p><p>3、到output下查看运算结果。</p><h1 id="四、完全分布式模式安装"><a href="#四、完全分布式模式安装" class="headerlink" title="四、完全分布式模式安装"></a>四、完全分布式模式安装</h1><h2 id="4-1-单机准备"><a href="#4-1-单机准备" class="headerlink" title="4.1 单机准备"></a>4.1 单机准备</h2><p>准备一台已经安装了单机版hadoop的机器进行操作——hadoop201</p><h3 id="4-1-1-关闭防火墙——保证内网集群的通讯"><a href="#4-1-1-关闭防火墙——保证内网集群的通讯" class="headerlink" title="4.1.1 关闭防火墙——保证内网集群的通讯"></a>4.1.1 关闭防火墙——保证内网集群的通讯</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# systemctl stop firewalld.service # 关闭防火墙</span><br><span class="line">[root@localhost ~]# systemctl status firewalld.service # 查看状态--dead</span><br><span class="line">[root@localhost ~]# systemctl disable firewalld.service # 禁止开机启动</span><br></pre></td></tr></table></figure><h3 id="4-1-2-设置静态IP——固定IP地址"><a href="#4-1-2-设置静态IP——固定IP地址" class="headerlink" title="4.1.2 设置静态IP——固定IP地址"></a>4.1.2 设置静态IP——固定IP地址</h3><p>（1）利用vim，修改网络配置文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure><p>（2）修改结果</p><p><img src="https://img.ynistt.top/blogPic/image-20221017194509670.png" alt="image-20221017194509670"></p><p>87位置的数要看虚拟网络编辑器vm8中查看</p><p>（3）设置域名——方便记忆和访问</p><ol><li><p>修改 &#x2F;etc&#x2F;hosts文件，</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc</span><br></pre></td></tr></table></figure><p> 末尾添加一行：</p><p> 192.168.87.201hadoop201</p></li><li><p>修改 &#x2F;etc&#x2F;hostname 文件，清空文件</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hostname</span><br></pre></td></tr></table></figure><p> 末尾添加：</p><p> 192.168.87.201hadoop201</p></li><li><p>修改C:\Windows\System32\drivers\etc\hosts文件，末尾添加：</p><p> 192.168.87.201 hadoop201</p></li></ol><p>到此，可以用hadoop201 来作为主机名连接xshell 和 linux</p><h2 id="4-2-三机互联"><a href="#4-2-三机互联" class="headerlink" title="4.2 三机互联"></a>4.2 三机互联</h2><p>1、从hadoop201中拷贝出另外2台机器，分别为hadoop202，hadoop203。</p><p>2、修改静态IP分别为202和203。</p><p>3、设置域名为202和203。</p><p>最终，&#x2F;etc&#x2F;hosts 和 windows的hosts，都要有以下3行：</p><p>192.168.87.201 hadoop201</p><p>192.168.87.202 hadoop202</p><p>192.168.87.203 hadoop203</p><p>最终效果体现：</p><ol><li>xshell能利用 域名hadoopxxx 连接3台机器</li><li>3台机器能通过 域名hadoopxxx 互相ping 通</li></ol>]]></content>
       
       
       <categories>
           
-          <category> Java集合 </category>
+          <category> 大数据 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Java集合 </tag>
+            <tag> 大数据 </tag>
             
         </tags>
       
@@ -71,6 +71,8 @@
         <tags>
             
             <tag> Linux </tag>
+            
+            <tag> 大数据 </tag>
             
         </tags>
       
