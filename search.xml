@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>本地项目上传到github</title>
+      <link href="/lzl/95e65056.html"/>
+      <url>/lzl/95e65056.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一、操作步骤"><a href="#一、操作步骤" class="headerlink" title="一、操作步骤"></a>一、操作步骤</h1><h2 id="1-在github创建仓库"><a href="#1-在github创建仓库" class="headerlink" title="1.在github创建仓库"></a>1.在github创建仓库</h2><p><img src="https://img.ynistt.top/blogPic/image-20221029230513724.png"></p><h2 id="2-在将要上传的项目目录上git-bash-here"><a href="#2-在将要上传的项目目录上git-bash-here" class="headerlink" title="2.在将要上传的项目目录上git bash here"></a>2.在将要上传的项目目录上git bash here</h2><h2 id="3-git-init进行初始化"><a href="#3-git-init进行初始化" class="headerlink" title="3.git init进行初始化"></a>3.git init进行初始化</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><h2 id="4-git-add-将文件添加到暂存区"><a href="#4-git-add-将文件添加到暂存区" class="headerlink" title="4.git add 将文件添加到暂存区"></a>4.git add 将文件添加到暂存区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure><p>.代表所有文件  可以选择想要上传的文件</p><h2 id="5-将项目提交到本地版本库"><a href="#5-将项目提交到本地版本库" class="headerlink" title="5.将项目提交到本地版本库"></a>5.将项目提交到本地版本库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;提交信息&quot;</span><br></pre></td></tr></table></figure><h2 id="6-github的仓库与本地仓库相关联"><a href="#6-github的仓库与本地仓库相关联" class="headerlink" title="6.github的仓库与本地仓库相关联"></a>6.github的仓库与本地仓库相关联</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@git.....git</span><br></pre></td></tr></table></figure><p>git@git…..git 为ssh链接</p><h2 id="7-将本地仓库推送到github仓库"><a href="#7-将本地仓库推送到github仓库" class="headerlink" title="7.将本地仓库推送到github仓库"></a>7.将本地仓库推送到github仓库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><p>-f 强制提交</p><h2 id="8-其他命令"><a href="#8-其他命令" class="headerlink" title="8.其他命令"></a>8.其他命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v //查看仓库地址</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log //查看日志，提交信息</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Springboot整合jwt</title>
       <link href="/lzl/c3367c1e.html"/>
       <url>/lzl/c3367c1e.html</url>
