@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>JavaSE</title>
+      <link href="/lzl/2b32338b.html"/>
+      <url>/lzl/2b32338b.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><h2 id="1-1-java优点"><a href="#1-1-java优点" class="headerlink" title="1.1 java优点"></a>1.1 java优点</h2><ol><li>java是一门面向对象语言，然后面向对象有三大特性（封装、继承、多态）</li><li>java可以跨平台运行，只要经过一次编译，在其他平台安装对应的jvm就可以到处运行</li><li>拥有许多的类库可以给开发人员使用</li><li>具有安全性和健壮性（具有恶意代码攻击的安全机制）</li><li>强大的生态社区，例如Spring</li><li>支持多线程</li></ol><h2 id="1-2-java基本数据类型和引用类型"><a href="#1-2-java基本数据类型和引用类型" class="headerlink" title="1.2 java基本数据类型和引用类型"></a>1.2 java基本数据类型和引用类型</h2><p>1byte &#x3D; 8bit</p><p>基本类型：byte（8bit）-128~127、short（16）、int（32）、long（64）、float（32）、double（64）、char（16）、boolean（8）</p><p>引用类型：接口、数组、类、String</p><h2 id="1-3-接口和抽象类的区别"><a href="#1-3-接口和抽象类的区别" class="headerlink" title="1.3 接口和抽象类的区别"></a>1.3 接口和抽象类的区别</h2><p>共同点：</p><ol><li>都不能被实例化</li><li>可以拥有抽象方法</li></ol><p>区别：</p><ol><li>抽象类使用的是abstract关键字，接口使用interface关键字</li><li>抽象类可以有静态方法、常量和成员变量，而接口只能有常量</li><li>抽象类只能被单继承，一个类可以实现多个接口</li><li>抽象类可以有构造方法，接口没有构造方法</li></ol><h2 id="1-4-final关键字的作用"><a href="#1-4-final关键字的作用" class="headerlink" title="1.4 final关键字的作用"></a>1.4 final关键字的作用</h2><ol><li>final可以修饰类，变量、方法</li><li>被final修饰的类是不可以被继承的，例如String类，类不能被继承，所以它的方法也是不能被重写的</li><li>如果是基本类型被final修饰，则相当于是一个常量</li><li>如果是引用类型被修饰，则引用的地址是不变的，但所对应的值可以改变</li></ol><h2 id="1-5-static的用法"><a href="#1-5-static的用法" class="headerlink" title="1.5 static的用法"></a>1.5 static的用法</h2><ol><li>static是静态的意思，可以修饰类、变量、方法、代码块，不能修饰构造器</li><li>使用static后，该类就为静态类，我们就可以使用类名+方法名的方式在其他类中直接调用并使用，不必要在创建这个静态类的实例</li></ol><h2 id="1-6-String类"><a href="#1-6-String类" class="headerlink" title="1.6 String类"></a>1.6 String类</h2><ol><li>String类被final进行修饰，所以是不能被继承的</li><li>String str &#x3D; “666”；和String str &#x3D; new String（“666”）;  前者是在常量池进行管理，后者会先判断常量池中是否有，没有则创建，并且会在堆中创建一个对象</li></ol><h2 id="1-7-String和StringBuffer和StringBuilder"><a href="#1-7-String和StringBuffer和StringBuilder" class="headerlink" title="1.7 String和StringBuffer和StringBuilder"></a>1.7 String和StringBuffer和StringBuilder</h2><ol><li>String是一个不可变的字符串（字符序列）。应为String类被final修饰。因为String的复用性高。线程安全</li><li>如果要使用可变的字符序列，就使用StringBuffer和StringBuilder</li><li>StringBuffer是线程安全的，但是效率低于StringBuilder，高于String</li><li>StringBuilder是线程不安全的，但效率最高</li></ol><h2 id="1-8-x3D-x3D-和equals的区别"><a href="#1-8-x3D-x3D-和equals的区别" class="headerlink" title="1.8 &#x3D;&#x3D; 和equals的区别"></a>1.8 &#x3D;&#x3D; 和equals的区别</h2><ol><li>&#x3D;&#x3D; 和 equals在比较基本类型时，都是比较他们的值是否相等，因为equal方法默认是使用 &#x3D;&#x3D; 进行判断</li><li>如果比较的是引用类型时，则比较的是他们的地址</li><li>如果重写了equals，则比较的是他们的内容</li><li>重写equals后，也需要重写hashcode，因为之间具有联动的关系</li><li>为什么有联动的关系，因为有着两个对象相等，则他们的哈希值也是相等，hashcode相等的两个对象equals不一定相等，所以需要重写</li></ol><h2 id="1-9-自动装箱和自动拆箱"><a href="#1-9-自动装箱和自动拆箱" class="headerlink" title="1.9 自动装箱和自动拆箱"></a>1.9 自动装箱和自动拆箱</h2><ol><li>自动装箱即把基本类型转成包装类型，int-&gt;Integer,long-&gt;Long</li><li>自动拆箱则相反</li><li>自动装箱时，使用了valueof方法</li><li>拆箱则使用了xxxvalue</li></ol><h2 id="1-10-异常处理机制"><a href="#1-10-异常处理机制" class="headerlink" title="1.10 异常处理机制"></a>1.10 异常处理机制</h2><p>一种是try-catch方式，一种是throw方式</p><h2 id="1-11-重载和重写"><a href="#1-11-重载和重写" class="headerlink" title="1.11 重载和重写"></a>1.11 重载和重写</h2><ol><li>重写是发生在父子类的，子类重写父类的方法。子类访问修饰符权限要大于父类，并且父类方法被private、final修饰，则不能重写</li><li>重载是一个类中方法名相同，但是参数列表不同</li></ol><h2 id="1-12-多线程"><a href="#1-12-多线程" class="headerlink" title="1.12 多线程"></a>1.12 多线程</h2><p>线程是程序执行的最小单元，一个进程可以拥有多个线程</p><p>每个线程之间共享程序的内存空间</p><p>多线程可以提高cpu的利用率，减少等待响应的时间</p><h2 id="1-13-创建线程的方式"><a href="#1-13-创建线程的方式" class="headerlink" title="1.13 创建线程的方式"></a>1.13 创建线程的方式</h2><ol><li>继承Thread类 重写 run方法</li><li>继承Runnable接口，实现run方法</li><li>继承Callable接口，实现call方法，会有返回值，可以抛出异常</li><li>线程池创建（ThreadPoolExecutor类）</li></ol><h2 id="1-14-线程状态"><a href="#1-14-线程状态" class="headerlink" title="1.14 线程状态"></a>1.14 线程状态</h2><ol><li>初始状态：被创建，但没调用start方法</li><li>可运行状态：等待操作系统的调度</li><li>阻塞状态</li><li>等待状态</li><li>超时等待状态</li><li>终止状态</li></ol><h2 id="1-15-Spring常用注解"><a href="#1-15-Spring常用注解" class="headerlink" title="1.15 Spring常用注解"></a>1.15 Spring常用注解</h2><p>1.声明bean注解</p><p>@Component：泛指各种组件</p><p>@Controller @Service @Repository</p><p>2.注入bean的注解</p><p>@Autowired：由Spring提供 按类型注入</p><p>@Resource @Inject 由jsr提供 按名称注入</p><p>3.配置类注解</p><p>@Configuration：声明该类为配置类</p><p>@Bean ，声明方法返回的值为一个bean</p><p>@ComponentScan，扫描</p><p>@Value注解</p><p>注入属性</p><h2 id="1-16-mysql隔离级别"><a href="#1-16-mysql隔离级别" class="headerlink" title="1.16 mysql隔离级别"></a>1.16 mysql隔离级别</h2><p>读取未提交内容 </p><p>读取提交内容</p><p>可重读</p><p>可串行化</p><h2 id="1-17事务的acid"><a href="#1-17事务的acid" class="headerlink" title="1.17事务的acid"></a>1.17事务的acid</h2><p>原子性、一致性、持续性、隔离性</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaSE </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaSE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hadoop集群配置</title>
       <link href="/lzl/89b15fed.html"/>
       <url>/lzl/89b15fed.html</url>

@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JavaSE | Ynistt Home</title><meta name="keywords" content="JavaSE"><meta name="author" content="Ynistt"><meta name="copyright" content="Ynistt"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、基础1.1 java优点 java是一门面向对象语言，然后面向对象有三大特性（封装、继承、多态） java可以跨平台运行，只要经过一次编译，在其他平台安装对应的jvm就可以到处运行 拥有许多的类库可以给开发人员使用 具有安全性和健壮性（具有恶意代码攻击的安全机制） 强大的生态社区，例如Spring 支持多线程  1.2 java基本数据类型和引用类型1byte &#x3D; 8bit 基本类型">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE">
+<meta property="og:url" content="https://love.ynistt.top/lzl/2b32338b.html">
+<meta property="og:site_name" content="Ynistt Home">
+<meta property="og:description" content="一、基础1.1 java优点 java是一门面向对象语言，然后面向对象有三大特性（封装、继承、多态） java可以跨平台运行，只要经过一次编译，在其他平台安装对应的jvm就可以到处运行 拥有许多的类库可以给开发人员使用 具有安全性和健壮性（具有恶意代码攻击的安全机制） 强大的生态社区，例如Spring 支持多线程  1.2 java基本数据类型和引用类型1byte &#x3D; 8bit 基本类型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://love.ynistt.top/img/index.jpg">
+<meta property="article:published_time" content="2022-11-30T13:24:16.000Z">
+<meta property="article:modified_time" content="2022-12-15T03:23:11.856Z">
+<meta property="article:author" content="Ynistt">
+<meta property="article:tag" content="JavaSE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://love.ynistt.top/img/index.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://love.ynistt.top/lzl/2b32338b"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaSE',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-15 11:23:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/self/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Ynistt Home</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JavaSE</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-30T13:24:16.000Z" title="发表于 2022-11-30 21:24:16">2022-11-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-15T03:23:11.856Z" title="更新于 2022-12-15 11:23:11">2022-12-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/JavaSE/">JavaSE</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JavaSE"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><h2 id="1-1-java优点"><a href="#1-1-java优点" class="headerlink" title="1.1 java优点"></a>1.1 java优点</h2><ol>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><li>java是一门面向对象语言，然后面向对象有三大特性（封装、继承、多态）</li>
+<li>java可以跨平台运行，只要经过一次编译，在其他平台安装对应的jvm就可以到处运行</li>
+<li>拥有许多的类库可以给开发人员使用</li>
+<li>具有安全性和健壮性（具有恶意代码攻击的安全机制）</li>
+<li>强大的生态社区，例如Spring</li>
+<li>支持多线程</li>
+</ol>
+<h2 id="1-2-java基本数据类型和引用类型"><a href="#1-2-java基本数据类型和引用类型" class="headerlink" title="1.2 java基本数据类型和引用类型"></a>1.2 java基本数据类型和引用类型</h2><p>1byte &#x3D; 8bit</p>
+<p>基本类型：byte（8bit）-128~127、short（16）、int（32）、long（64）、float（32）、double（64）、char（16）、boolean（8）</p>
+<p>引用类型：接口、数组、类、String</p>
+<h2 id="1-3-接口和抽象类的区别"><a href="#1-3-接口和抽象类的区别" class="headerlink" title="1.3 接口和抽象类的区别"></a>1.3 接口和抽象类的区别</h2><p>共同点：</p>
+<ol>
+<li>都不能被实例化</li>
+<li>可以拥有抽象方法</li>
+</ol>
+<p>区别：</p>
+<ol>
+<li>抽象类使用的是abstract关键字，接口使用interface关键字</li>
+<li>抽象类可以有静态方法、常量和成员变量，而接口只能有常量</li>
+<li>抽象类只能被单继承，一个类可以实现多个接口</li>
+<li>抽象类可以有构造方法，接口没有构造方法</li>
+</ol>
+<h2 id="1-4-final关键字的作用"><a href="#1-4-final关键字的作用" class="headerlink" title="1.4 final关键字的作用"></a>1.4 final关键字的作用</h2><ol>
+<li>final可以修饰类，变量、方法</li>
+<li>被final修饰的类是不可以被继承的，例如String类，类不能被继承，所以它的方法也是不能被重写的</li>
+<li>如果是基本类型被final修饰，则相当于是一个常量</li>
+<li>如果是引用类型被修饰，则引用的地址是不变的，但所对应的值可以改变</li>
+</ol>
+<h2 id="1-5-static的用法"><a href="#1-5-static的用法" class="headerlink" title="1.5 static的用法"></a>1.5 static的用法</h2><ol>
+<li>static是静态的意思，可以修饰类、变量、方法、代码块，不能修饰构造器</li>
+<li>使用static后，该类就为静态类，我们就可以使用类名+方法名的方式在其他类中直接调用并使用，不必要在创建这个静态类的实例</li>
+</ol>
+<h2 id="1-6-String类"><a href="#1-6-String类" class="headerlink" title="1.6 String类"></a>1.6 String类</h2><ol>
+<li>String类被final进行修饰，所以是不能被继承的</li>
+<li>String str &#x3D; “666”；和String str &#x3D; new String（“666”）;  前者是在常量池进行管理，后者会先判断常量池中是否有，没有则创建，并且会在堆中创建一个对象</li>
+</ol>
+<h2 id="1-7-String和StringBuffer和StringBuilder"><a href="#1-7-String和StringBuffer和StringBuilder" class="headerlink" title="1.7 String和StringBuffer和StringBuilder"></a>1.7 String和StringBuffer和StringBuilder</h2><ol>
+<li>String是一个不可变的字符串（字符序列）。应为String类被final修饰。因为String的复用性高。线程安全</li>
+<li>如果要使用可变的字符序列，就使用StringBuffer和StringBuilder</li>
+<li>StringBuffer是线程安全的，但是效率低于StringBuilder，高于String</li>
+<li>StringBuilder是线程不安全的，但效率最高</li>
+</ol>
+<h2 id="1-8-x3D-x3D-和equals的区别"><a href="#1-8-x3D-x3D-和equals的区别" class="headerlink" title="1.8 &#x3D;&#x3D; 和equals的区别"></a>1.8 &#x3D;&#x3D; 和equals的区别</h2><ol>
+<li>&#x3D;&#x3D; 和 equals在比较基本类型时，都是比较他们的值是否相等，因为equal方法默认是使用 &#x3D;&#x3D; 进行判断</li>
+<li>如果比较的是引用类型时，则比较的是他们的地址</li>
+<li>如果重写了equals，则比较的是他们的内容</li>
+<li>重写equals后，也需要重写hashcode，因为之间具有联动的关系</li>
+<li>为什么有联动的关系，因为有着两个对象相等，则他们的哈希值也是相等，hashcode相等的两个对象equals不一定相等，所以需要重写</li>
+</ol>
+<h2 id="1-9-自动装箱和自动拆箱"><a href="#1-9-自动装箱和自动拆箱" class="headerlink" title="1.9 自动装箱和自动拆箱"></a>1.9 自动装箱和自动拆箱</h2><ol>
+<li>自动装箱即把基本类型转成包装类型，int-&gt;Integer,long-&gt;Long</li>
+<li>自动拆箱则相反</li>
+<li>自动装箱时，使用了valueof方法</li>
+<li>拆箱则使用了xxxvalue</li>
+</ol>
+<h2 id="1-10-异常处理机制"><a href="#1-10-异常处理机制" class="headerlink" title="1.10 异常处理机制"></a>1.10 异常处理机制</h2><p>一种是try-catch方式，一种是throw方式</p>
+<h2 id="1-11-重载和重写"><a href="#1-11-重载和重写" class="headerlink" title="1.11 重载和重写"></a>1.11 重载和重写</h2><ol>
+<li>重写是发生在父子类的，子类重写父类的方法。子类访问修饰符权限要大于父类，并且父类方法被private、final修饰，则不能重写</li>
+<li>重载是一个类中方法名相同，但是参数列表不同</li>
+</ol>
+<h2 id="1-12-多线程"><a href="#1-12-多线程" class="headerlink" title="1.12 多线程"></a>1.12 多线程</h2><p>线程是程序执行的最小单元，一个进程可以拥有多个线程</p>
+<p>每个线程之间共享程序的内存空间</p>
+<p>多线程可以提高cpu的利用率，减少等待响应的时间</p>
+<h2 id="1-13-创建线程的方式"><a href="#1-13-创建线程的方式" class="headerlink" title="1.13 创建线程的方式"></a>1.13 创建线程的方式</h2><ol>
+<li>继承Thread类 重写 run方法</li>
+<li>继承Runnable接口，实现run方法</li>
+<li>继承Callable接口，实现call方法，会有返回值，可以抛出异常</li>
+<li>线程池创建（ThreadPoolExecutor类）</li>
+</ol>
+<h2 id="1-14-线程状态"><a href="#1-14-线程状态" class="headerlink" title="1.14 线程状态"></a>1.14 线程状态</h2><ol>
+<li>初始状态：被创建，但没调用start方法</li>
+<li>可运行状态：等待操作系统的调度</li>
+<li>阻塞状态</li>
+<li>等待状态</li>
+<li>超时等待状态</li>
+<li>终止状态</li>
+</ol>
+<h2 id="1-15-Spring常用注解"><a href="#1-15-Spring常用注解" class="headerlink" title="1.15 Spring常用注解"></a>1.15 Spring常用注解</h2><p>1.声明bean注解</p>
+<p>@Component：泛指各种组件</p>
+<p>@Controller @Service @Repository</p>
+<p>2.注入bean的注解</p>
+<p>@Autowired：由Spring提供 按类型注入</p>
+<p>@Resource @Inject 由jsr提供 按名称注入</p>
+<p>3.配置类注解</p>
+<p>@Configuration：声明该类为配置类</p>
+<p>@Bean ，声明方法返回的值为一个bean</p>
+<p>@ComponentScan，扫描</p>
+<p>@Value注解</p>
+<p>注入属性</p>
+<h2 id="1-16-mysql隔离级别"><a href="#1-16-mysql隔离级别" class="headerlink" title="1.16 mysql隔离级别"></a>1.16 mysql隔离级别</h2><p>读取未提交内容 </p>
+<p>读取提交内容</p>
+<p>可重读</p>
+<p>可串行化</p>
+<h2 id="1-17事务的acid"><a href="#1-17事务的acid" class="headerlink" title="1.17事务的acid"></a>1.17事务的acid</h2><p>原子性、一致性、持续性、隔离性</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://love.ynistt.top">Ynistt</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://love.ynistt.top/lzl/2b32338b.html">https://love.ynistt.top/lzl/2b32338b.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://love.ynistt.top" target="_blank">Ynistt Home</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaSE/">JavaSE</a></div><div class="post_share"><div class="social-share" data-image="/img/index.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/lzl/89b15fed.html"><img class="next-cover" src="https://img.ynistt.top/blogPic/1544d63ad55b1ecdb920628ce3444461.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hadoop集群配置</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ynistt</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Ynistt"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Ynistt" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1365187408@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">一、基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-java%E4%BC%98%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 java优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 java基本数据类型和引用类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 接口和抽象类的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-final%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 final关键字的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-static%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 static的用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-String%E7%B1%BB"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 String类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-String%E5%92%8CStringBuffer%E5%92%8CStringBuilder"><span class="toc-number">1.7.</span> <span class="toc-text">1.7 String和StringBuffer和StringBuilder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8-x3D-x3D-%E5%92%8Cequals%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.8.</span> <span class="toc-text">1.8 &#x3D;&#x3D; 和equals的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-9-%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E5%92%8C%E8%87%AA%E5%8A%A8%E6%8B%86%E7%AE%B1"><span class="toc-number">1.9.</span> <span class="toc-text">1.9 自动装箱和自动拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-10-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-number">1.10.</span> <span class="toc-text">1.10 异常处理机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-11-%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99"><span class="toc-number">1.11.</span> <span class="toc-text">1.11 重载和重写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-12-%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.12.</span> <span class="toc-text">1.12 多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-13-%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">1.13.</span> <span class="toc-text">1.13 创建线程的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-14-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="toc-number">1.14.</span> <span class="toc-text">1.14 线程状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-15-Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.15.</span> <span class="toc-text">1.15 Spring常用注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-16-mysql%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">1.16.</span> <span class="toc-text">1.16 mysql隔离级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-17%E4%BA%8B%E5%8A%A1%E7%9A%84acid"><span class="toc-number">1.17.</span> <span class="toc-text">1.17事务的acid</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/lzl/2b32338b.html" title="JavaSE"><img src="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaSE"/></a><div class="content"><a class="title" href="/lzl/2b32338b.html" title="JavaSE">JavaSE</a><time datetime="2022-11-30T13:24:16.000Z" title="发表于 2022-11-30 21:24:16">2022-11-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/lzl/89b15fed.html" title="hadoop集群配置"><img src="https://img.ynistt.top/blogPic/1544d63ad55b1ecdb920628ce3444461.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hadoop集群配置"/></a><div class="content"><a class="title" href="/lzl/89b15fed.html" title="hadoop集群配置">hadoop集群配置</a><time datetime="2022-11-14T05:42:35.000Z" title="发表于 2022-11-14 13:42:35">2022-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/lzl/95e65056.html" title="本地项目上传到github"><img src="https://img.ynistt.top/blogPic/660e2eb77354ca04f6c19e0b3b8322a7.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="本地项目上传到github"/></a><div class="content"><a class="title" href="/lzl/95e65056.html" title="本地项目上传到github">本地项目上传到github</a><time datetime="2022-10-29T14:39:22.000Z" title="发表于 2022-10-29 22:39:22">2022-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/lzl/c3367c1e.html" title="Springboot整合jwt"><img src="https://img.ynistt.top/blogPic/bg-5fa37c6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot整合jwt"/></a><div class="content"><a class="title" href="/lzl/c3367c1e.html" title="Springboot整合jwt">Springboot整合jwt</a><time datetime="2022-10-24T01:04:44.000Z" title="发表于 2022-10-24 09:04:44">2022-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/lzl/dc6256c8.html" title="hadoop安装"><img src="https://img.ynistt.top/blogPic/163339870e3135e732b84b602c386940.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hadoop安装"/></a><div class="content"><a class="title" href="/lzl/dc6256c8.html" title="hadoop安装">hadoop安装</a><time datetime="2022-10-17T06:44:41.000Z" title="发表于 2022-10-17 14:44:41">2022-10-17</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/index.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 By Ynistt</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://fastly.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/theme_f/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.js"></script><!-- hexo injector body_end end --><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
